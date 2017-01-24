@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from rango.models import Category
 from rango.models import Page
+from rango.forms import CategoryForm
 
 def index(request):
     category_list = Category.objects.order_by( '-likes' )[:5]
@@ -17,18 +18,29 @@ def about(request):
 def show_category(request, category_name_slug):
     context_dict = {}
     try:
-        #The .get() method returns one model instance or raises an exception.
         category = Category.objects.get( slug=category_name_slug )
 
-        # Retrieve all of the associated pages.
         pages = Page.objects.filter( category=category )
 
-        # Adds our results list to the template context under name pages.
         context_dict['pages'] = pages
         context_dict['category'] = category
     except Category.DoesNotExist:
         context_dict['category'] = None
         context_dict['pages'] = None
 
-    # Go render the response and return it to the client.
     return render( request, 'rango/category.html', context_dict )
+
+
+def add_category(request):
+	form = CategoryForm()
+
+	if request.method == 'POST':
+		form = CategoryForm(request.POST)
+
+		if form.is_valid():
+			form.save(commit=True)
+			return index(request)
+		else:
+			print(form.errors)
+
+	return render(request, 'rango/add_category.html', {'form': form})
