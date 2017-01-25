@@ -76,6 +76,8 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+LOGIN_URL = '/rango/login/'
+
 STATICFILES_DIRS = [STATIC_DIR, ]
 
 LANGUAGE_CODE = 'en-us'
