@@ -14,8 +14,9 @@ def index(request):
 
 
 def about(request):
-    context_dict = {'boldmessage': "This tutorial has been put together by Archit Gupta"}
-    return render(request, 'rango/about.html', context=context_dict)
+    print(request.method)
+    print(request.user)
+    return render(request, 'rango/about.html', {})
 
 
 def show_category(request, category_name_slug):
@@ -38,7 +39,7 @@ def add_category(request):
     form = CategoryForm()
 
     if request.method == 'POST':
-        form = CategoryForm()
+        form = CategoryForm(request.POST)
 
         if form.is_valid():
             form.save(commit=True)
@@ -57,7 +58,7 @@ def add_page(request, category_name_slug):
 
     form = PageForm()
     if request.method == 'POST':
-        form = PageForm()
+        form = PageForm(request.POST)
         if form.is_valid():
             if category:
                 page = form.save(commit=False)
