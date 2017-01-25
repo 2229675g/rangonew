@@ -1,0 +1,14 @@
+{% extends 'rango/base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+	Register
+{% endblock %}
+
+{% block body_block %}
+<div>
+	<h1>Restricted Page</h1>
+		Rango says: <strong>Since you're logged in, you can see this text!</strong>
+		<a href="{% url 'index' %}">Return to the homepage.</a><br />
+</div>
+{% endblock %}
