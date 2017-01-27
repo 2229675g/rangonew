@@ -24,12 +24,7 @@ def index(request):
 
 
 def about(request):
-    visitor_cookie_handler(request)
-    context_dict['visits'] = request.session['visits']
-    print(request.method)
-    print(request.user)
-    response = render(request, 'rango/about.html', context=context_dict)
-    return response
+    return render(request, 'rango/about.html', {})
 
 
 def show_category(request, category_name_slug):
