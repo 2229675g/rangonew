@@ -15,14 +15,15 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
+	'rango',
+    'registration',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rango',
-    'registration'
+
 ]
 
 MIDDLEWARE = [
@@ -86,6 +87,7 @@ REGISTRATION_AUTO_LOGIN = True
 LOGIN_REDIRECT_URL = '/rango'
 
 LOGIN_URL = '/accounts/login/'
+
 
 STATICFILES_DIRS = [STATIC_DIR, ]
 
