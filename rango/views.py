@@ -1,15 +1,14 @@
 from django.shortcuts import render
-from rango.models import Category
-from rango.models import Page
-from rango.forms import CategoryForm
-from rango.forms import PageForm
-from rango.forms import UserForm, UserProfileForm
-from django.contrib.auth import authenticate, login
-from django.http import HttpResponseRedirect, HttpResponse
+from django.shortcuts import redirect
 from django.core.urlresolvers import reverse
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth import logout
+from django.http import HttpResponse
+from rango.models import Category, Page, UserProfile
+from rango.forms import CategoryForm, PageForm, UserProfileForm
 from datetime import datetime
+from registration.backends.simple.views import RegistrationView
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login
 
 def index(request):
     category_list = Category.objects.order_by('-likes')[:5]
@@ -162,6 +161,45 @@ def track_url():
             return HttpResponse("Page id {0} not found".format(page_id))
     print("No page_id in get string")
     return redirect(reverse('index'))
+	
+@login_required
+def register_profile(request):
+    form = UserProfileForm()
+    if request.method == 'POST':
+        form = UserProfileForm(request.POST, request.FILES)
+        if form.is_valid():
+            user_profile = form.save(commit=False)
+            user_profile.user = request.user
+            user_profile.save()
+            
+            return redirect('index')
+        else:
+            print(form.errors)
+
+    context_dict = {'form':form}
+    
+    return render(request, 'rango/profile_registration.html', context_dict)
+	
+@login_required
+def profile(request, username):
+    try:
+        user = User.objects.get(username=username)
+    except User.DoesNotExist:
+        return redirect('index')
+    
+    userprofile = UserProfile.objects.get_or_create(user=user)[0]
+    form = UserProfileForm({'website': userprofile.website, 'picture': userprofile.picture})
+    
+    if request.method == 'POST':
+        form = UserProfileForm(request.POST, request.FILES, instance=userprofile)
+        if form.is_valid():
+            form.save(commit=True)
+            return redirect('profile', user.username)
+        else:
+            print(form.errors)
+    
+    return render(request, 'rango/profile.html', {'userprofile': userprofile, 'selecteduser': user, 'form': form})
+
 
 @login_required
 def restricted(request):
