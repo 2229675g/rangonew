@@ -23,18 +23,16 @@ def index(request):
 
 
 def about(request):
-	visitor_cookie_handler(request)
-	context_dict = {'visits': request.session['visits']}
-	return render(request, 'rango/about.html', context=context_dict)
+    visitor_cookie_handler(request)
+    context_dict = {'visits': request.session['visits']}
+    return render(request, 'rango/about.html', context=context_dict)
 
 
 def show_category(request, category_name_slug):
     context_dict = {}
     try:
         category = Category.objects.get(slug=category_name_slug)
-
-        pages = Page.objects.filter(category=category)
-
+        pages = Page.objects.filter(category=category).order_by('-views')
         context_dict['pages'] = pages
         context_dict['category'] = category
     except Category.DoesNotExist:
@@ -145,7 +143,7 @@ def visitor_cookie_handler(request):
         request.session['last_visit'] = last_visit_cookie
 
     request.session['visits'] = visits
-	
+
 def track_url():
     page_id = None
     if request.method == 'GET':
@@ -161,7 +159,7 @@ def track_url():
             return HttpResponse("Page id {0} not found".format(page_id))
     print("No page_id in get string")
     return redirect(reverse('index'))
-	
+
 @login_required
 def register_profile(request):
     form = UserProfileForm()
@@ -179,7 +177,7 @@ def register_profile(request):
     context_dict = {'form':form}
     
     return render(request, 'rango/profile_registration.html', context_dict)
-	
+
 @login_required
 def profile(request, username):
     try:
@@ -200,6 +198,19 @@ def profile(request, username):
     
     return render(request, 'rango/profile.html', {'userprofile': userprofile, 'selecteduser': user, 'form': form})
 
+def track_url(request):
+    page_id = None
+    url = '/rango/'
+    if request.method == 'GET':
+        page_id = request.GET['page_id']
+        try:
+            page = Page.objects.get(id=page_id)
+            page.views = page.views + 1
+            page.save()
+            url = page.url
+        except:
+            pass
+    return redirect(url)
 
 @login_required
 def restricted(request):
