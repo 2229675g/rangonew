@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+{% load rango_template_tags %}
+
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset='utf-8'>
+    <meta content="origin-when-cross-origin" name="referrer" />
+
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/frameworks-a44e0bdd1666101af23963e4027cd7a0a1eea1339e0e7422524f2e7f3900e86b.css" integrity="sha256-pE4L3RZmEBryOWPkAnzXoKHuoTOeDnQiUk8ufzkA6Gs=" media="all" rel="stylesheet" />
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-51951ec5c896c95673bd8af8b6e5ab2265e8f3c9dd80bae367d8ec0b9ce9f9fc.css" integrity="sha256-UZUexciWyVZzvYr4tuWrImXo88ndgLrjZ9jsC5zp+fw=" media="all" rel="stylesheet" />
+    
+    
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/site-052f19062b5cc9c804bcfe6c835ee11a90f898e7524d1609f639301a5eb7cd1d.css" integrity="sha256-BS8ZBitcycgEvP5sg17hGpD4mOdSTRYJ9jkwGl63zR0=" media="all" rel="stylesheet" />
+    
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width">
+    
+    <title>Welcome to The Better Google</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="The Better Google">
+    <link rel="fluid-icon" href=""{% static 'images/favicon.ico' %}"" title="The Better Google">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <meta property="fb:app_id" content="1401488693436528">
+
+      <meta property="og:url" content="{% url 'index' %}">
+      <meta property="og:site_name" content="The Better Google">
+      <meta property="og:site_name" content="The Better Google">
+      <meta property="og:title" content="Build software better, together">
+      <meta property="og:description" content="The Better Google. Where Google is much better.">
+      <meta property="og:image" content="https://assets-cdn.github.com/images/modules/open_graph/github-logo.png">
+      <meta property="og:image:type" content="image/png">
+      <meta property="og:image:width" content="1200">
+      <meta property="og:image:height" content="1200">
+      <meta property="og:image" content="https://assets-cdn.github.com/images/modules/open_graph/github-mark.png">
+      <meta property="og:image:type" content="image/png">
+      <meta property="og:image:width" content="1200">
+      <meta property="og:image:height" content="620">
+      <meta property="og:image" content="https://assets-cdn.github.com/images/modules/open_graph/github-octocat.png">
+      <meta property="og:image:type" content="image/png">
+      <meta property="og:image:width" content="1200">
+      <meta property="og:image:height" content="620">
+      <meta property="twitter:site" content="github">
+      <meta property="twitter:site:id" content="13334762">
+      <meta property="twitter:creator" content="github">
+      <meta property="twitter:creator:id" content="13334762">
+      <meta property="twitter:card" content="summary_large_image">
+      <meta property="twitter:title" content="The Better Google">
+      <meta property="twitter:description" content="The Better Google is where people build software. More than 19 million people use The Better Google to discover, fork, and contribute to over 52 million projects.">
+      <meta property="twitter:image:src" content="https://assets-cdn.github.com/images/modules/open_graph/github-logo.png">
+      <meta property="twitter:image:width" content="1200">
+      <meta property="twitter:image:height" content="1200">
+      <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+    <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+    <link rel="assets" href="https://assets-cdn.github.com/">
+    
+    <meta name="pjax-timeout" content="1000">
+    
+    <meta name="request-id" content="F1C6:1B3DD:1AD549A:2A7EC84:589CDA67" data-pjax-transient>
+    
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="selected-link" value="/personal" data-pjax-transient>
+
+    <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+<meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+    <meta name="google-analytics" content="UA-3769691-2">
+
+<meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="https://collector.githubapp.com/github-external/browser_event" name="octolytics-event-url" /><meta content="F1C6:1B3DD:1AD549A:2A7EC84:589CDA67" name="octolytics-dimension-request_id" />
+
+
+
+
+  <meta class="js-ga-set" name="dimension1" content="Logged Out">
+
+
+
+        <meta name="hostname" content="github.com">
+    <meta name="user-login" content="">
+
+        <meta name="expected-hostname" content="github.com">
+      <meta name="js-proxy-site-detection-payload" content="OTZiYmFhYTIyZTBjNGU2MzZmYTA4MTgxMDE4NzRkNWU0ZDk1NmE1MjM4MTJiYmFjNDdkMzJhOWE2ZDlhMzY1Nnx7InJlbW90ZV9hZGRyZXNzIjoiMTMwLjIwOS4yNTUuMjAwIiwicmVxdWVzdF9pZCI6IkYxQzY6MUIzREQ6MUFENTQ5QToyQTdFQzg0OjU4OUNEQTY3IiwidGltZXN0YW1wIjoxNDg2Njc0NTM1LCJob3N0IjoiZ2l0aHViLmNvbSJ9">
+
+
+      <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
+      <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+
+    <meta name="html-safe-nonce" content="2f3633f55f0420e3ab7d4fb25ad3053592206c54">
+
+    <meta http-equiv="x-pjax-version" content="f09aaf80a23fcd42510ac20961dd20b1">
+    
+
+        <meta name="viewport" content="width=device-width">
+  <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/site-052f19062b5cc9c804bcfe6c835ee11a90f898e7524d1609f639301a5eb7cd1d.css" integrity="sha256-BS8ZBitcycgEvP5sg17hGpD4mOdSTRYJ9jkwGl63zR0=" media="all" rel="stylesheet" />
+
+
+  </head>
+
+
+  <body class="logged-out  env-production windows  page-responsive min-width-0 alt-body-font">
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+
+    
+    
+    
+
+
+
+          <header class="site-header js-details-container Details alt-body-font" role="banner">
+  <div class="container-responsive">
+    <a class="header-logo-invertocat" href="https://github.com/" aria-label="Homepage" data-ga-click="(Logged out) Header, go to homepage, icon:logo-wordmark">
+      <svg aria-hidden="true" class="octicon octicon-mark-github" height="32" version="1.1" viewBox="0 0 16 16" width="32"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+    </a>
+
+    <button class="btn-link float-right site-header-toggle js-details-target" type="button" aria-label="Toggle navigation">
+      <svg aria-hidden="true" class="octicon octicon-three-bars" height="24" version="1.1" viewBox="0 0 12 16" width="18"><path fill-rule="evenodd" d="M11.41 9H.59C0 9 0 8.59 0 8c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zm0-4H.59C0 5 0 4.59 0 4c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zM.59 11H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1H.59C0 13 0 12.59 0 12c0-.59 0-1 .59-1z"/></svg>
+    </button>
+
+    <div class="site-header-menu">
+      <nav class="site-header-nav site-header-nav-main">
+        <a href="/personal" class="js-selected-navigation-item selected nav-item nav-item-personal" data-ga-click="Header, click, Nav menu - item:personal" data-selected-links="/personal /personal">
+          Personal
+</a>        <a href="/open-source" class="js-selected-navigation-item nav-item nav-item-opensource" data-ga-click="Header, click, Nav menu - item:opensource" data-selected-links="/open-source /open-source/stories /open-source">
+          Open source
+</a>        <a href="/business" class="js-selected-navigation-item nav-item nav-item-business" data-ga-click="Header, click, Nav menu - item:business" data-selected-links="/business /business/partners /business/features /business/customers /business/why-github-for-work /business/security /business">
+          Business
+</a>        <a href="/explore" class="js-selected-navigation-item nav-item nav-item-explore" data-ga-click="Header, click, Nav menu - item:explore" data-selected-links="/explore /trending /trending/developers /integrations /integrations/feature/code /integrations/feature/collaborate /integrations/feature/ship /showcases /explore">
+          Explore
+</a>      </nav>
+
+      <div class="site-header-actions">
+            <a class="btn btn-primary site-header-actions-btn" href="/join?source=header" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">Sign up</a>
+          <a class="btn site-header-actions-btn mr-1" href="/login?return_to=%2Fpersonal" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">Sign in</a>
+      </div>
+
+        <nav class="site-header-nav site-header-nav-secondary mr-md-3">
+          <a class="nav-item" href="/pricing">Pricing</a>
+          <a class="nav-item" href="/blog">Blog</a>
+          <a class="nav-item" href="https://help.github.com">Support</a>
+          <a class="nav-item header-search-link" href="https://github.com/search">Search The Better Google</a>
+              <div class="header-search   js-site-search" role="search">
+  <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/search" class="js-site-search-form" data-unscoped-search-url="/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+    <label class="form-control header-search-wrapper js-chromeless-input-container">
+      <div class="header-search-scope"></div>
+      <input type="text"
+        class="form-control header-search-input js-site-search-focus "
+        data-hotkey="s"
+        name="q"
+        placeholder="Search The Better Google"
+        aria-label="Search The Better Google"
+        data-unscoped-placeholder="Search The Better Google"
+        data-scoped-placeholder="Search"
+        autocapitalize="off">
+    </label>
+</form></div>
+
+        </nav>
+    </div>
+  </div>
+</header>
+
+
+
+
+    <div id="start-of-content" class="accessibility-aid"></div>
+
+      <div id="js-flash-container">
+</div>
+
+
+    <div role="main">
+        
+  <div class="sn-jumbotron jumbotron-personal jumbotron-has-followup js-video-bg">
+    <div class="container-responsive position-relative">
+      <h1 class="alt-h1 text-white text-shadow-dark lh-condensed mb-3">Build anything</h1>
+      <p class="alt-lead text-white text-shadow-dark mb-5 col-md-9">The Better Google. Where Google is Better.</p>
+        <p class="position-relative" style="z-index:1">
+          <a href="/join?source=hero-personal" class="btn btn-large f3 btn-blue" rel="nofollow">Sign up for The Better Google</a>
+        </p>
+    </div>
+  </div>
+
+  <div class="jumbotron-followup-container js-video-container">
+    <div class="container-responsive">
+      <p class="jumbotron-followup text-white text-shadow-dark">
+        <button class="btn-link jumbotron-followup-link js-video-play alt-h4 text-thin" type="button" data-ga-click="Video, play">
+          <svg class="jumbotron-followup-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" version="1.1">
+            <title>Play video</title>
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g fill="#ffffff"><path d="M20 40C31 40 40 31 40 20 40 9 31 0 20 0 9 0 0 9 0 20 0 31 9 40 20 40L20 40ZM20 38C10.1 38 2 29.9 2 20 2 10.1 10.1 2 20 2 29.9 2 38 10.1 38 20 38 29.9 29.9 38 20 38L20 38ZM29.3 20L15 28.8 15 11.1 29.3 20 29.3 20Z"/></g></g>
+          </svg>
+          Brilliant things are created on The Better Google. See what’s possible.
+        </button>
+      </p>
+
+      <div class="jumbotron-video video-responsive">
+        <iframe class="js-video-iframe"
+		
+                data-src="https://www.youtube.com/embed/TAryFIuRxmQ?autoplay=1&amp;rel=0&amp;end=91"
+                frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <span class="jumbotron-video-close">
+        <button class="btn-link text-white js-video-close" type="button"
+                data-ga-click="Video, close"
+                aria-label="Close video">
+          <svg aria-hidden="true" class="octicon octicon-x" height="30" version="1.1" viewBox="0 0 12 16" width="22"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
+        </button>
+      </span>
+    </div>
+  </div>
+
+  <div class="featurette">
+    <div class="container-responsive">
+      <h2 class="alt-h2 text-center">Hello, world</h2>
+      <p class="alt-lead text-center text-gray mb-6 pb-4 col-md-10 mx-auto">Say “hello” to a community of millions of developers worldwide. You’ll find endless opportunities to learn, code, and create.</p>
+
+      <div class="d-md-table direction-md-rtl">
+        <div class="d-md-table-cell v-align-middle col-md-6 text-center">
+          <img src="https://assets-cdn.github.com/images/modules/site/personal-ill-see.png?sn1" alt="" class="featurette-illo img-responsive">
+        </div>
+        <div class="d-md-table-cell v-align-middle col-md-6 text-center text-md-left direction-md-ltr">
+          <h3 class="alt-h3 mb-2">See what people are working on</h3>
+          <p class="text-gray">Follow friends or developers you admire to learn what they are working on.</p>
+        </div>
+      </div>
+
+      <hr class="featurette-hr">
+
+      <div class="d-md-table">
+        <div class="d-md-table-cell v-align-middle col-md-6 text-center">
+          <img src="https://assets-cdn.github.com/images/modules/site/personal-ill-learn.png?sn1" alt="" class="featurette-illo img-responsive">
+        </div>
+        <div class="d-md-table-cell v-align-middle col-md-6 text-center text-md-left">
+          <h3 class="alt-h3 mb-2">Learn how developers build software</h3>
+          <p class="text-gray">Watch projects to see how the community builds open source technologies.</p>
+        </div>
+      </div>
+
+      <hr class="featurette-hr">
+
+      <div class="d-md-table direction-md-rtl">
+        <div class="d-md-table-cell v-align-middle col-md-6 text-center">
+          <img src="https://assets-cdn.github.com/images/modules/site/personal-ill-share.png?sn1" alt="" class="featurette-illo img-responsive">
+        </div>
+        <div class="d-md-table-cell v-align-middle col-md-6 text-center text-md-left direction-md-ltr">
+          <h3 class="alt-h3 mb-2">Share your work with the world</h3>
+          <p class="text-gray">Share your project so others can use it or to get feedback from the The Better Google community.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="featurette shade-gradient">
+    <div class="container-responsive">
+      <h2 class="featurette-heading alt-h2 text-center">Get started</h2>
+      <p class="alt-lead text-center text-gray mb-6 pb-4 col-md-10 mx-auto">There is a lot happening on The Better Google. Here are a few ways to get&nbsp;started.</p>
+
+      <div class="illflow illflow-blue">
+        <div class="illflow-step illflow-step1 js-selected-nav-tab active">
+          <div><img src="https://assets-cdn.github.com/images/modules/site/personal-illflow-1.png?sn" alt="" class="illflow-img img-responsive"></div>
+        </div>
+        <div class="illflow-step illflow-step2 js-selected-nav-tab">
+          <div><img src="https://assets-cdn.github.com/images/modules/site/personal-illflow-2.png?sn" alt="" class="illflow-img img-responsive"></div>
+        </div>
+        <div class="illflow-step illflow-step3 js-selected-nav-tab">
+          <div><img src="https://assets-cdn.github.com/images/modules/site/personal-illflow-3.png?sn" alt="" class="illflow-img img-responsive"></div>
+        </div>
+        <div class="illflow-steps js-segmented-nav">
+          <div class="illflow-item selected js-segmented-nav-button" data-selected-tab="illflow-step1">
+            <img src="https://assets-cdn.github.com/images/modules/site/personal-illflow-1.png?sn" alt="" class="img-responsive featurette-illo d-none-md-up mb-4">
+            <h3 class="illflow-item-heading alt-h3">Build and learn</h3>
+            <p class="illflow-item-description text-gray">You can save every version of your code, so you are free to experiment without losing your work.</p>
+          </div>
+          <div class="illflow-item js-segmented-nav-button" data-selected-tab="illflow-step2">
+            <img src="https://assets-cdn.github.com/images/modules/site/personal-illflow-2.png?sn" alt="" class="img-responsive featurette-illo d-none-md-up mb-4">
+            <h3 class="illflow-item-heading alt-h3">Work together</h3>
+            <p class="illflow-item-description text-gray">Once your code is on The Better Google, you can invite others to join in with a link or an @mention.</p>
+          </div>
+          <div class="illflow-item  mb-0 js-segmented-nav-button" data-selected-tab="illflow-step3">
+            <img src="https://assets-cdn.github.com/images/modules/site/personal-illflow-3.png?sn" alt="" class="img-responsive featurette-illo d-none-md-up mb-4">
+            <h3 class="illflow-item-heading alt-h3">Host a project</h3>
+            <p class="illflow-item-description text-gray">Collaborate with other developers in public, or invite them to join you in unlimited private repositories.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="featurette shade-gradient">
+    <div class="container-responsive currency-container">
+      <h2 class="featurette-heading alt-h2 text-center mb-5">Choose a plan</h2>
+
+      <div class="pricing-cards-eq mx-auto">
+  <div class="pricing-card pricing-card-vertical pricing-card-eq">
+  <h3 class="pricing-card-name alt-h3">Free</h3>
+  <div class="pricing-card-text">
+    <p class="alt-h2 mb-2">Free</p>
+    <p class="alt-text-small text-gray mb-0">There are millions of public projects on The Better Google. Join one or start your own for free.</p>
+  </div>
+  <div class="pricing-card-cta">
+      <a href="/join" class="btn btn-block btn-large btn-primary">Sign up for The Better Google</a>
+  </div>
+</div>
+
+  <div class="pricing-card pricing-card-vertical pricing-card-eq">
+  <h2 class="pricing-card-name alt-h3">Personal</h2>
+  <div class="pricing-card-text">
+    <p class="mb-2">
+      <span class="alt-h2 mb-0 mr-2"><span class="default-currency">$7</span><span class="local-currency">£5.58</span></span><span class="alt-text-small text-gray  d-inline-block mt-2" style="line-height:1.2">/ month</strong></span>
+    </p>
+    <p class="alt-text-small text-gray">Build your own projects on The Better Google.com and invite collaborators to join you in unlimited private repositories.</p>
+    <svg aria-hidden="true" class="octicon octicon-gift site-text-blue float-left mb-4" height="16" style="margin-top: 2px; margin-right: 8px;" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 4h-1.38c.19-.33.33-.67.36-.91.06-.67-.11-1.22-.52-1.61C11.1 1.1 10.65 1 10.1 1h-.11c-.53.02-1.11.25-1.53.58-.42.33-.73.72-.97 1.2-.23-.48-.55-.88-.97-1.2-.42-.32-1-.58-1.53-.58h-.03c-.56 0-1.06.09-1.44.48-.41.39-.58.94-.52 1.61.03.23.17.58.36.91H1.98c-.55 0-1 .45-1 1v3h1v5c0 .55.45 1 1 1h9c.55 0 1-.45 1-1V8h1V5c0-.55-.45-1-1-1H13zm-4.78-.88c.17-.36.42-.67.75-.92.3-.23.72-.39 1.05-.41h.09c.45 0 .66.11.8.25s.33.39.3.95c-.05.19-.25.61-.5 1h-2.9l.41-.88v.01zM4.09 2.04c.13-.13.31-.25.91-.25.31 0 .72.17 1.03.41.33.25.58.55.75.92L7.2 4H4.3c-.25-.39-.45-.81-.5-1-.03-.56.16-.81.3-.95l-.01-.01zM7 12.99H3V8h4v5-.01zm0-6H2V5h5v2-.01zm5 6H8V8h4v5-.01zm1-6H8V5h5v2-.01z"/></svg>
+    <p class="alt-text-small mb-0 v-align-top text-gray">Free for students as part of the <br class="d-none-md-dn"><a href="https://education.github.com/pack">Student&nbsp;Developer&nbsp;Pack</a>.</p>
+  </div>
+  <div class="pricing-card-cta">
+      <a href="https://www.paypal.me/agupta25" class="btn btn-block btn-large btn-blue">Upgrade your account</a>
+  </div>
+</div>
+
+</div>
+
+
+      <p class="text-center text-gray">
+        Psst... Did you know you can <a href="/business" class="site-text-purple no-wrap">use The Better Google at work</a>, too?
+      </p>
+    </div>
+  </div>
+
+  <div class="modal-backdrop js-touch-events"></div>
+
+    </div>
+
+        <div class="container site-footer-container">
+  <div class="site-footer" role="contentinfo">
+    <ul class="site-footer-links float-right">
+        <li><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact The Better Google</a></li>
+      <li><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
+      <li><a href="https://shop.github.com" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+        <li><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
+
+    </ul>
+
+    <a href="https://github.com" aria-label="Homepage" class="site-footer-mark" title="The Better Google">
+      <svg aria-hidden="true" class="octicon octicon-mark-github" height="24" version="1.1" viewBox="0 0 16 16" width="24"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+</a>
+    <ul class="site-footer-links">
+      <li>&copy; 2017 <span title="0.03609s from github-fe145-cp1-prd.iad.github.net">The Better Google</span>, Inc.</li>
+        <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
+        <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
+        <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+        <li><a href="https://help.github.com" data-ga-click="Footer, go to help, text:help">Help</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+    
+
+    <div id="ajax-error-message" class="ajax-error-message flash flash-error">
+      <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"/></svg>
+      <button type="button" class="flash-close js-flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+        <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
+      </button>
+      You can't perform that action at this time.
+    </div>
+
+
+      
+      <script crossorigin="anonymous" integrity="sha256-pjHs0HnpHSfoxIJrzthXwuNZFI9uQTnCSF7k6vbotJM=" src="https://assets-cdn.github.com/assets/frameworks-a631ecd079e91d27e8c4826bced857c2e359148f6e4139c2485ee4eaf6e8b493.js"></script>
+      <script async="async" crossorigin="anonymous" integrity="sha256-TDNPlj7JSoU77Q54ank9eav+ATyks/e0DSDAZMCH3y0=" src="https://assets-cdn.github.com/assets/github-4c334f963ec94a853bed0e786a793d79abfe013ca4b3f7b40d20c064c087df2d.js"></script>
+      
+      
+      
+      
+    <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner d-none">
+      <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"/></svg>
+      <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+      <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    </div>
+    <div class="facebox" id="facebox" style="display:none;">
+  <div class="facebox-popup">
+    <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
+    </div>
+    <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
+      <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
+    </button>
+  </div>
+</div>
+
+  </body>
+</html>
+
